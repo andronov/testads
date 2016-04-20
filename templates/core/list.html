@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">Ads</h1>
+
+<ul class="list-group">
+    {% for ads in object_list %}
+  <li class="list-group-item">
+  <h1>{{ ads.created|date }} - <a href="{% url "core:core__ads_detail" ads.id %}">{{ ads.name }}</a></h1>
+  <p>{{ ads.description }}</p>
+  </li>
+    {% empty %}
+     <li class="list-group-item">No ads yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

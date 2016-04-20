@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<h1 class="text-center">{{ object.name }}</h1>
+
+<ul class="list-group">
+  <li class="list-group-item">
+  <p>{{ object.description }}</p>
+      {% if not hitcount.hit_counted %}
+    <br>
+    <b>Вы уже смотрели это объявление</b>
+    <br>
+    <b>Просмотров: {{ hitcount.total_hits }}</b>
+{% endif%}
+  </li>
+</ul>
+
+{% endblock %}
