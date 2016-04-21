@@ -1,5 +1,8 @@
 Django==1.9.5
 django-bootstrap3==7.0.1
 django-hitcount==1.2.1
+pycrypto==2.6.1
+PyJWT==1.4.0
 pytz==2016.3
+redis==2.10.5
 wheel==0.24.0

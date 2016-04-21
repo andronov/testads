@@ -9,12 +9,11 @@
 <ul class="list-group">
   <li class="list-group-item">
   <p>{{ object.description }}</p>
-      {% if not hitcount.hit_counted %}
-    <br>
+    {% if counter_views.viewed %}<br>
     <b>Вы уже смотрели это объявление</b>
+    {% endif %}
     <br>
-    <b>Просмотров: {{ hitcount.total_hits }}</b>
-{% endif%}
+    <b>Просмотров:{{ counter_views.counter }}</b>
   </li>
 </ul>
 
